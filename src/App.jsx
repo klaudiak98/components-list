@@ -2,15 +2,25 @@ import Button from "./components/Button"
 import { GoBell, GoCalendar, GoDatabase } from 'react-icons/go'
 
 const App = () => {
+    const handleClick = () => {
+        console.log('clik')
+    }
+
     return <div>
         <div>
-            <Button success rounded outline><GoBell/> Click me!</Button>
+            <Button 
+                success 
+                rounded 
+                outline 
+                classes="mb-2" 
+                onClick={handleClick}
+            ><GoBell/> Click me!</Button>
         </div>
         <div>
-            <Button danger outline><GoCalendar/> Dowload</Button>
+            <Button danger outline onMouseEnter={handleClick}><GoCalendar/> Dowload</Button>
         </div>
         <div>
-            <Button warning><GoDatabase/>Store</Button>
+            <Button warning onMouseLeave={handleClick}><GoDatabase/>Store</Button>
         </div>
         <div>
             <Button secondary outline>Something</Button>
