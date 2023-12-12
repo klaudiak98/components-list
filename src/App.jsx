@@ -4,6 +4,7 @@ import DropdownPage from "./pages/DropdownPage"
 import Route from "./components/Route"
 import Sidebar from "./components/Sidebar"
 import ModalPage from "./pages/ModalPage"
+import TablePage from "./pages/TablePage"
 
 const App = () => {
    
@@ -24,6 +25,9 @@ const App = () => {
             </Route>
             <Route path='/modal'>
                 <ModalPage/>
+            </Route>
+            <Route path='/table'>
+                <TablePage/>
             </Route>
         </div>
     </div>
