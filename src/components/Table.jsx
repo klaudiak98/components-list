@@ -1,7 +1,8 @@
-const Table = ({ config, data, keyFn }) => {
+import { Fragment } from "react"
 
+const Table = ({ config, data, keyFn }) => {
     const renderedHeaders = config.map((col) => (
-        <th key={col.label}>{col.label}</th>
+        col.header ? <Fragment key={col.label}>{col.header()}</Fragment> : <th key={col.label}>{col.label}</th>
     ))
 
     const renderedRows = data.map((row) => {
